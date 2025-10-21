@@ -36,7 +36,7 @@ def caesar_decrypt(text: str, shift: int) -> str:
     # Decryption is just encryption with a negative shift
     return caesar_encrypt(text, -shift)
 
-if __name__ == '__main__':
+def main() -> None:
     while True:
         print("\nCaesar Cipher Program")
         choice = input("Choose an option:\n1. Encrypt\n2. Decrypt\n3. Exit\nEnter your choice (1/2/3): ")
@@ -62,3 +62,6 @@ if __name__ == '__main__':
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == '__main__':
+    main()

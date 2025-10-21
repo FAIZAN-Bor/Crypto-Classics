@@ -54,7 +54,7 @@ def row_transposition_decrypt(cipher_text: str, key: str) -> str:
     plain_text = "".join(["".join(row) for row in matrix])
     return plain_text
 
-if __name__ == '__main__':
+def main() -> None:
     while True:
         print("\nRow Transposition Cipher Program")
         choice = input("Choose an option:\n1. Encrypt\n2. Decrypt\n3. Exit\nEnter your choice (1/2/3): ")
@@ -82,3 +82,6 @@ if __name__ == '__main__':
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == '__main__':
+    main()

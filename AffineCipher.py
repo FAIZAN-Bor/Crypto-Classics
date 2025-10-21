@@ -61,7 +61,7 @@ def affine_decrypt(ciphertext: str, key_a: int, key_b: int) -> str:
             result += char
     return result
 
-if __name__ == '__main__':
+def main() -> None:
     while True:
         print("\nAffine Cipher Program")
         choice = input("Choose an option:\n1. Encrypt\n2. Decrypt\n3. Exit\nEnter your choice (1/2/3): ")
@@ -89,3 +89,6 @@ if __name__ == '__main__':
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == '__main__':
+    main()

@@ -3,8 +3,6 @@ Pytest unit tests for cipher implementations.
 Run with: pytest -q
 """
 
-import pytest
-
 from CeaserCipher import caesar_encrypt, caesar_decrypt
 from AffineCipher import affine_encrypt, affine_decrypt
 from PlayfairCipher import generate_key_matrix, prepare_plaintext, playfair_crypt
