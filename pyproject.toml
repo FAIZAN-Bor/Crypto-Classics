@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classic-ciphers"
+version = "0.1.0"
+description = "Classic cipher implementations with a unified CLI"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+classic-ciphers = "cli:main"
+
+[tool.setuptools]
+py-modules = [
+  "CeaserCipher",
+  "AffineCipher",
+  "PlayfairCipher",
+  "RailFenceCipher",
+  "RowTranspositionCipher",
+  "VigenereCipher",
+  "cli",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+select = ["E", "F", "I", "UP"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "preserve"
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_unused_configs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+strict_optional = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+check_untyped_defs = true
+ignore_missing_imports = true
+exclude = [
+  "__pycache__",
+]
